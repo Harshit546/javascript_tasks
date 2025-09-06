@@ -1,8 +1,5 @@
-function sumFromString(str) {
-    const result = str.split(',').map(res => parseFloat(res.trim())).reduce((acc, num) => acc+num, 0);
-
-    return result;
+function sumNumbers(str) {
+  return str.split(",").map(Number).reduce((a, b) => a + b, 0);
 }
 
-const str = "1.5, 2.3, 3.1, 4, 5.5, 6, 7, 8, 9, 10.9";
-console.log(sumFromString(str));
+console.log(sumNumbers("1.5, 2.3, 3.1, 4, 5.5, 6, 7, 8, 9, 10.9")); // 57.3
